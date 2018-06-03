@@ -21,7 +21,7 @@ public class Main {
 		System.out.println(findNumber(al, sum));
 	}
 
-	static ArrayList<Integer> findNumber(ArrayList al,int  sum){
+	static ArrayList<Integer> findNumber(ArrayList<Integer> al,int  sum){
 		int p2=al.size()-1;
 		int p1=0;
 		ArrayList<Integer> a= new ArrayList<>();
@@ -29,6 +29,14 @@ public class Main {
 		int temp=0;
 		while(b){
 			temp=(int)al.get(p1)+(int)al.get(p2);
+			//if number already present in array
+			for(Integer i : al){
+				if(i==sum){
+				a.add(i);
+				return a;
+				}
+			}
+			
 			if(p1>=al.size()){
 				b=false;
 			}else if(temp<sum){
