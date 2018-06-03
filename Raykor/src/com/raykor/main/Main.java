@@ -36,6 +36,12 @@ public class Main {
 				return a;
 				}
 			}
+			for(Integer i : al){
+				if(i==sum){
+				a.add(i);
+				return a;
+				}
+			}
 			
 			if(p1>=al.size()){
 				b=false;
